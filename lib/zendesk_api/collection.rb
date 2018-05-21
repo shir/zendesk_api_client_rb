@@ -159,7 +159,7 @@ module ZendeskAPI
     # @option item [ZendeskAPI::Data] the resource to add
     # @raise [ArgumentError] if the resource doesn't belong in this collection
     def <<(item)
-      fetch
+      fetch!
 
       if item.is_a?(Resource)
         if item.is_a?(@resource_class)
